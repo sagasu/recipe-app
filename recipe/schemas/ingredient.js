@@ -15,6 +15,11 @@ export default {
             option: {
                 hotspot: true
             }
+        },
+        {
+            name: "notes",
+            title: "Notes",
+            type: "text",
         }
     ]
 }
