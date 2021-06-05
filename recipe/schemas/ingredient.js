@@ -1,0 +1,20 @@
+export default {
+    name: "ingredient",
+    title: "Ingredient",
+    type: "document",
+    fields: [
+        {
+            name: "name",
+            title: "Ingredient name",
+            type: "string"
+        },
+        {
+            name: "image",
+            title: "Image",
+            type: "image",
+            option: {
+                hotspot: true
+            }
+        }
+    ]
+}
