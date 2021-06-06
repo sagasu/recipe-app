@@ -72,7 +72,31 @@ export default {
                             list: ["grams", "cup", "Tbsp.", "tsp."]
                         }
                     }
-                ]
+                ],
+                preview: {
+                    select: {
+                        title: "ingredient.name",
+                        name: "ingredient.name",
+                        media: "ingredient.image",
+                        wholeNumber: "wholeNumber",
+                        fraction: "fraction",
+                        unit: "unit"
+                    },
+                    prepare({
+                        title,
+                        subtitle,
+                        media,
+                        wholeNumber = "(no number set)",
+                        fraction = "(no fraction set)",
+                        unit = "(no unit set)"
+                    }){
+                        return {
+                            title,
+                            subtitle: `${wholeNumber} ${fraction} ${unit}`,
+                            media
+                        }
+                    }
+                }
             }
         ]
     }
