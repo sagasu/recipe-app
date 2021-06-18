@@ -18,12 +18,12 @@ export default function Home({recipes}) {
       </Head>
 
       <h1>Welcome to my recipes</h1>
-      <ul>
+      <ul className="recipes-list">
         {recipes?.length > 0 && recipes.map((recipe) => (
-          <li>
+          <li key={recipe._id} className="recipe-card">
             <Link href="/">
               <a>
-                <img/>
+                <img src={urlFor(recipe.mainImage).url()} />
                 <span>{recipe.name}</span>
               </a>
             </Link>
